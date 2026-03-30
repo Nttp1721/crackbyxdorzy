@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://finalapphft.onrender.com/panel -->
+<html lang="vi"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>AimTrickHead VIP</title>
+  
+  <style>
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{-webkit-text-size-adjust:100%;touch-action:manipulation}
+    :root{
+      --line:rgba(255,255,255,.08);
+      --violet:#d8b4ff;
+      --violet2:#b77cff;
+      --pink:#ff6fd8;
+      --muted:#b9b1c9;
+      --ok:#8dffb4;
+      --err:#ff7aa2;
+      --gold:#ffd56b;
+    }
+    body{
+      margin:0;min-height:100vh;font-family:Arial,sans-serif;color:#fff;overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(170,90,255,.22), transparent 24%),
+        radial-gradient(circle at 85% 18%, rgba(255,70,180,.18), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(135,80,255,.18), transparent 30%),
+        linear-gradient(160deg,#040308,#0d0715,#080510);
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;
+      background:linear-gradient(transparent, rgba(255,255,255,.03), transparent);
+      background-size:100% 5px;animation:scan 9s linear infinite;
+    }
+    body:after{
+      content:"";position:fixed;inset:-20%;pointer-events:none;opacity:.18;
+      background:radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size:18px 18px;animation:moveDots 24s linear infinite;
+    }
+    @keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+    @keyframes moveDots{from{transform:translateY(0)}to{transform:translateY(80px)}}
+    @keyframes glow{
+      0%{box-shadow:0 0 18px rgba(183,124,255,.16),0 0 36px rgba(255,111,216,.05)}
+      50%{box-shadow:0 0 28px rgba(183,124,255,.25),0 0 56px rgba(255,111,216,.10)}
+      100%{box-shadow:0 0 18px rgba(183,124,255,.16),0 0 36px rgba(255,111,216,.05)}
+    }
+    @keyframes pulseText{
+      0%{text-shadow:0 0 10px rgba(183,124,255,.25)}
+      50%{text-shadow:0 0 18px rgba(255,111,216,.25)}
+      100%{text-shadow:0 0 10px rgba(183,124,255,.25)}
+    }
+    @keyframes neonBar{
+      0%{background-position:0% 50%}
+      100%{background-position:200% 50%}
+    }
+    @keyframes popIn{
+      0%{opacity:0;transform:scale(.96)}
+      100%{opacity:1;transform:scale(1)}
+    }
+    @keyframes ripple{
+      0%{transform:scale(.92);opacity:.15}
+      100%{transform:scale(1.18);opacity:0}
+    }
+    .wrap{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;
+      padding:18px;overflow:hidden;
+    }
+    .card{
+      width:min(94vw,530px);max-height:calc(100vh - 34px);overflow:auto;
+      border-radius:30px;background:rgba(12,10,20,.92);
+      border:1px solid rgba(215,180,255,.18);animation:glow 4s infinite;
+      backdrop-filter:blur(16px);
+      box-shadow:0 0 26px rgba(183,124,255,.15);
+      overscroll-behavior:contain;
+    }
+    .card::-webkit-scrollbar{width:0;height:0}
+    .top{
+      padding:22px 18px 16px;border-bottom:1px solid var(--line);
+      position:relative;overflow:hidden
+    }
+    .top::before{
+      content:"";position:absolute;inset:auto -10% -60% auto;width:260px;height:260px;
+      background:radial-gradient(circle, rgba(183,124,255,.16), transparent 65%);
+      pointer-events:none
+    }
+    .top::after{
+      content:"";position:absolute;left:-20%;top:-40px;width:140%;height:4px;
+      background:linear-gradient(90deg,transparent,var(--violet2),var(--pink),transparent);
+      background-size:200% 100%;animation:neonBar 3s linear infinite
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logoBox{
+      width:72px;height:72px;border-radius:20px;overflow:hidden;
+      box-shadow:0 0 18px rgba(183,124,255,.35);flex:0 0 72px;
+      background:rgba(255,255,255,.04)
+    }
+    .title{margin:0;font-size:clamp(22px,5vw,30px);color:var(--violet);animation:pulseText 3s infinite}
+    .sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .credit{margin-top:10px;color:var(--gold);font-size:12px;font-weight:700}
+    .content{padding:16px}
+    .input{
+      width:100%;height:56px;border:none;outline:none;border-radius:16px;padding:0 14px;
+      color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:15px
+    }
+    .btn,.smallBtn,.tab{
+      border:none;color:#fff;cursor:pointer;font-weight:700;border-radius:14px
+    }
+    .btn{
+      width:100%;height:54px;margin-top:12px;
+      background:linear-gradient(90deg,#8c52ff,#c86bff,#ff70c7);
+      background-size:200% 100%;animation:neonBar 4s linear infinite
+    }
+    .smallBtn{
+      height:38px;padding:0 12px;background:rgba(255,255,255,.08);border:1px solid var(--line)
+    }
+    .msg{min-height:22px;margin-top:12px;text-align:center;font-size:14px}
+    .ok{color:var(--ok)}
+    .err{color:var(--err)}
+    .hidden{display:none!important}
+    .topLine{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:12px;color:#f0e6ff
+    }
+    .noticeBox{
+      margin-top:12px;padding:13px 14px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);font-size:13px;color:#efe7ff;line-height:1.6
+    }
+    .tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:16px 0 14px}
+    .tab{height:44px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:12px}
+    .tab.active{background:linear-gradient(90deg,#8c52ff,#c86bff,#ff70c7)}
+    .tabPane{display:none}
+    .tabPane.active{display:block}
+    .tile{
+      padding:16px;border-radius:18px;margin-bottom:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid var(--line);position:relative;overflow:hidden;
+      transition:transform .2s ease, box-shadow .2s ease
+    }
+    .tile:hover{transform:translateY(-2px);box-shadow:0 0 18px rgba(183,124,255,.12)}
+    .tile::before{
+      content:"";position:absolute;width:140px;height:140px;right:-40px;bottom:-40px;
+      background:radial-gradient(circle, rgba(183,124,255,.16), transparent 65%)
+    }
+    .row{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1}
+    .name{margin:0;font-size:16px}
+    .desc{margin:6px 0 0;color:#c1b9d4;font-size:12px;line-height:1.45}
+    .switch{position:relative;width:58px;height:32px;flex:0 0 58px}
+    .switch input{display:none}
+    .slider{
+      position:absolute;inset:0;border-radius:999px;background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.1);transition:.25s;cursor:pointer
+    }
+    .slider:before{
+      content:"";position:absolute;width:24px;height:24px;left:4px;top:3px;border-radius:50%;
+      background:#fff;transition:.25s
+    }
+    .switch input:checked + .slider{
+      background:linear-gradient(90deg,#8c52ff,#ff70c7);box-shadow:0 0 18px rgba(200,107,255,.25)
+    }
+    .switch input:checked + .slider:before{transform:translateX(25px)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .socialBtn{
+      display:flex;align-items:center;justify-content:center;gap:10px;height:50px;border-radius:14px;
+      text-decoration:none;color:#fff;background:rgba(255,255,255,.07);border:1px solid var(--line);font-weight:700
+    }
+    .socialBtn:hover{box-shadow:0 0 16px rgba(255,255,255,.08)}
+    .footer{margin-top:10px;text-align:center;font-size:12px;color:#b9b0c9;line-height:1.6}
+    .liveFx{
+      margin-top:10px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.05);
+      border:1px solid var(--line);color:#f1e8ff;font-size:12px;min-height:38px
+    }
+    .fxLine{display:inline-block;animation:pulseText 1.6s infinite}
+    .sliderWrap{margin-top:10px}
+    .rangeLabel{
+      display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#e5dcf5;margin-bottom:8px
+    }
+    input[type=range]{width:100%;accent-color:#c86bff}
+    .toast{
+      position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(20px);
+      min-width:220px;max-width:92vw;padding:14px 16px;border-radius:16px;background:rgba(12,15,24,.95);
+      border:1px solid var(--line);color:#fff;text-align:center;z-index:120;opacity:0;pointer-events:none;
+      transition:.25s
+    }
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .toast.ok{color:var(--ok)}
+    .toast.err{color:var(--err)}
+    .loadingLayer{
+      position:fixed;inset:0;z-index:9999;
+      display:flex;align-items:center;justify-content:center;flex-direction:column;
+      background:
+        radial-gradient(circle at center, rgba(170,90,255,.18), transparent 30%),
+        linear-gradient(160deg,#030207,#0b0612,#05040b);
+      transition:opacity .55s ease, visibility .55s ease;
+    }
+    .loadingLayer.hide{opacity:0;visibility:hidden}
+    .loadingLogo{
+      width:170px;height:170px;border-radius:28px;overflow:hidden;
+      box-shadow:0 0 30px rgba(183,124,255,.28),0 0 70px rgba(255,111,216,.12);
+      animation:glow 3s infinite, popIn .7s ease;
+      background:rgba(255,255,255,.03);position:relative
+    }
+    .loadingLogo::after{
+      content:"";position:absolute;inset:0;border-radius:28px;border:1px solid rgba(255,255,255,.09)
+    }
+    .loadingText{
+      margin-top:18px;font-size:16px;color:var(--violet);font-weight:800;letter-spacing:1px;
+      animation:pulseText 2s infinite;
+    }
+    .loadingSub{margin-top:8px;color:#cbbddf;font-size:12px}
+    .loadingBar{
+      width:min(260px,72vw);height:8px;border-radius:999px;margin-top:16px;background:rgba(255,255,255,.08);overflow:hidden;border:1px solid rgba(255,255,255,.08)
+    }
+    .loadingBar > span{
+      display:block;height:100%;width:35%;
+      background:linear-gradient(90deg,#8c52ff,#c86bff,#ff70c7);
+      border-radius:999px;animation:neonBar 1.2s linear infinite;background-size:200% 100%
+    }
+    @media (max-width:560px){
+      .tabs{grid-template-columns:repeat(3,1fr)}
+      .grid2{grid-template-columns:1fr}
+      .wrap{padding:12px}
+      .card{width:min(96vw,530px);max-height:calc(100vh - 24px)}
+    }
+  </style>
+  
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;,&quot;//www.ukrnafta.com/data/map/&quot;,&quot;//maps.google.com/maps&quot;,&quot;//www.openstreetmap.org/export/embed.html&quot;,&quot;//www.google.com/maps/d/u/3/embed&quot;]" data-dynamic-id="0b9e9978-4741-4843-bd7a-7f8ba69410d7" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="0b9e9978-4741-4843-bd7a-7f8ba69410d7" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script></head>
+<body __processed_467c597e-7232-463a-bbf5-e067ebb8f0d1__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDUiLCJzY29yZSI6MjAwNDUwfV0=">
+  <div class="loadingLayer hide" id="loadingLayer" bis_skin_checked="1">
+    <div class="loadingLogo" bis_skin_checked="1"><img src="https://media.discordapp.net/attachments/1021017705169567806/1487517677315424438/logo.png?ex=69c96e4b&is=69c81ccb&hm=298191d787a65a20f80f490f29919d3a54d79571c5266ae1565b1a39b5b405b3&=&format=webp&quality=lossless&width=881&height=881" alt="AimTrickHead Logo" style="width:170px;height:170px;object-fit:cover;display:block;border-radius:28px"></div>
+    <div class="loadingText" bis_skin_checked="1">AimTrickHead VIP</div>
+    <div class="loadingSub" bis_skin_checked="1">Loading secure panel...</div>
+    <div class="loadingBar" bis_skin_checked="1"><span></span></div>
+  </div>
+
+  <div class="wrap" bis_skin_checked="1">
+    <div class="card" bis_skin_checked="1">
+      <div class="top" bis_skin_checked="1">
+        <div class="brand" bis_skin_checked="1">
+          <div class="logoBox" bis_skin_checked="1"><img src="https://media.discordapp.net/attachments/1021017705169567806/1487517677315424438/logo.png?ex=69c96e4b&is=69c81ccb&hm=298191d787a65a20f80f490f29919d3a54d79571c5266ae1565b1a39b5b405b3&=&format=webp&quality=lossless&width=881&height=881" alt="AimTrickHead Logo" style="width:72px;height:72px;object-fit:cover;display:block;border-radius:20px"></div>
+          <div bis_skin_checked="1">
+            <h1 class="title">AimTrickHead</h1>
+            <div class="sub" bis_skin_checked="1">TikTok: xDorzyNo1</div>
+            <div class="credit" bis_skin_checked="1">CRACK BY XDORZY</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content" bis_skin_checked="1">
+        <div id="loginView">
+          <input id="keyInput" class="input" placeholder="Nhập key của bạn">
+          <button class="btn" onclick="dangNhap()">Đăng nhập</button>
+          <div class="grid2" bis_skin_checked="1">
+            <a class="socialBtn" href="https://tiktok.com/@zpohzu" target="_blank" rel="noopener noreferrer">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path fill="#1877F2" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.023 4.388 11.015 10.125 11.927v-8.437H7.078v-3.49h3.047V9.41c0-3.017 1.792-4.684 4.533-4.684 1.313 0 2.686.235 2.686.235v2.963H15.83c-1.49 0-1.955.931-1.955 1.886v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.088 24 18.096 24 12.073Z"></path>
+    <path fill="#fff" d="M16.671 15.563l.532-3.49h-3.328V9.81c0-.955.465-1.886 1.955-1.886h1.514V4.96s-1.373-.235-2.686-.235c-2.741 0-4.533 1.667-4.533 4.684v2.664H7.078v3.49h3.047V24h3.75v-8.437h2.796Z"></path>
+  </svg> <span>TikTok</span></a>
+          </div>
+          <div id="msg" class="msg" bis_skin_checked="1"></div>
+        </div>
+
+        <div id="panelView" class="hidden">
+          <div class="topLine" bis_skin_checked="1">
+            <div class="pill" bis_skin_checked="1">✨ VIP ACTIVE</div>
+            <button class="smallBtn" onclick="dangXuat()">Thoát</button>
+          </div>
+
+          <div class="noticeBox" id="keyNotice" bis_skin_checked="1">
+            Key đang hoạt động.
+          </div>
+
+          <div class="tabs" bis_skin_checked="1">
+            <button class="tab active" data-tab="tab1">Main</button>
+            <button class="tab" data-tab="tab2">Optimize</button>
+            <button class="tab" data-tab="tab3">Game Boost</button>
+            <button class="tab" data-tab="tab4">Social</button>
+            <button class="tab" data-tab="tab5">Tools</button>
+            <button class="tab" data-tab="tab6">TikTok</button>
+          </div>
+
+          <div id="tab1" class="tabPane active" bis_skin_checked="1">
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">AimTrickHead</p><p class="desc">Tác dụng phản ngồi ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f2" onchange="toggleFx(this,&#39;AimTrickHead&#39;)"><span class="slider"></span></label></div></div>
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">Bám Đầu</p><p class="desc">Tác dụng phản ngồi ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f3" onchange="toggleFx(this,&#39;Bám Đầu&#39;)"><span class="slider"></span></label></div></div>
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">Nhẹ Tâm</p><p class="desc">Tác dụng phản ngồi ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f4" onchange="toggleFx(this,&#39;Nhẹ Tâm&#39;)"><span class="slider"></span></label></div></div>
+          </div>
+
+          <div id="tab2" class="tabPane" bis_skin_checked="1">
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">Tối Ưu Mạnh</p><p class="desc">Tác dụng phản ngồi ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f5" onchange="toggleFx(this,&#39;Tối Ưu Mạnh&#39;)"><span class="slider"></span></label></div></div>
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">Buff Nhạy x Nhẹ Tâm</p><p class="desc">Tác dụng phản ngồi ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f6" onchange="toggleFx(this,&#39;Buff Nhạy x Nhẹ Tâm&#39;)"><span class="slider"></span></label></div></div>
+            <div class="tile" bis_skin_checked="1">
+              <p class="name">Sensi Control</p>
+              <p class="desc">Tác dụng phản ngồi ngay sau khi bật</p>
+              <div class="sliderWrap" bis_skin_checked="1">
+                <div class="rangeLabel" bis_skin_checked="1"><span>Level</span><span id="sensiValue">0</span></div>
+                <input type="range" min="1" max="120" value="60" id="sensiRange" oninput="updateSensi(this.value)">
+              </div>
+            </div>
+          </div>
+
+          <div id="tab3" class="tabPane" bis_skin_checked="1">
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">Nhẹ Tâm + Fix Rung</p><p class="desc">Tác dụng phản ngồi ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f1" onchange="toggleFx(this,&#39;Nhẹ Tâm + Fix Rung&#39;)"><span class="slider"></span></label></div></div>
+            <div class="tile" bis_skin_checked="1"><div class="row" bis_skin_checked="1"><div bis_skin_checked="1"><p class="name">Game Boost</p><p class="desc">Tối ưu phản hồi và độ mượt ngay sau khi bật</p></div><label class="switch"><input type="checkbox" id="f7" onchange="toggleFx(this,&#39;Game Boost&#39;)"><span class="slider"></span></label></div></div>
+          </div>
+
+          <div id="tab4" class="tabPane" bis_skin_checked="1">
+            <div class="grid2" bis_skin_checked="1">
+              <a class="socialBtn" href="https://zalo.me/0365829172" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+    <rect x="4" y="4" width="56" height="56" rx="18" fill="#0068FF"></rect>
+    <path d="M17 22h30.5c1.7 0 2.58 2.03 1.42 3.27L28.1 46h18.4c1.9 0 2.73 2.39 1.23 3.56L46 51H17.5c-1.72 0-2.6-2.08-1.38-3.31L36.9 27H17c-1.66 0-2.5-2-1.34-3.2l.03-.03C16.05 22.3 16.5 22 17 22Z" fill="white"></path>
+  </svg> <span>Liên hệ Zalo</span></a>
+              <a class="socialBtn" href="https://discord.gg/VE2SJzga" target="_blank" rel="noopener noreferrer">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path fill="#1877F2" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.023 4.388 11.015 10.125 11.927v-8.437H7.078v-3.49h3.047V9.41c0-3.017 1.792-4.684 4.533-4.684 1.313 0 2.686.235 2.686.235v2.963H15.83c-1.49 0-1.955.931-1.955 1.886v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.088 24 18.096 24 12.073Z"></path>
+    <path fill="#fff" d="M16.671 15.563l.532-3.49h-3.328V9.81c0-.955.465-1.886 1.955-1.886h1.514V4.96s-1.373-.235-2.686-.235c-2.741 0-4.533 1.667-4.533 4.684v2.664H7.078v3.49h3.047V24h3.75v-8.437h2.796Z"></path>
+  </svg> <span>Discord</span></a>
+            </div>
+            <div class="footer" bis_skin_checked="1">Mua key hoặc hỗ trợ trực tiếp qua các nút trên.</div>
+          </div>
+
+          <div id="tab5" class="tabPane" bis_skin_checked="1">
+            <div class="grid2" bis_skin_checked="1">
+              <a class="socialBtn" href="https://ff.garena.com/vn/" target="_blank" rel="noopener noreferrer">🎮 <span>Free Fire</span></a>
+              <a class="socialBtn" href="https://ff.garena.com/vn/" target="_blank" rel="noopener noreferrer">🔥 <span>FF MAX</span></a>
+            </div>
+            <div class="footer" bis_skin_checked="1">Nút game mở trang chính thức Garena.</div>
+          </div>
+
+          <div id="tab6" class="tabPane" bis_skin_checked="1">
+            <div class="grid2" bis_skin_checked="1">
+              <a class="socialBtn" href="https://www.tiktok.com/@zpohzu" target="_blank" rel="noopener noreferrer">
+  <svg width="20" height="20" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+    <rect x="4" y="4" width="56" height="56" rx="18" fill="#0068FF"></rect>
+    <path d="M17 22h30.5c1.7 0 2.58 2.03 1.42 3.27L28.1 46h18.4c1.9 0 2.73 2.39 1.23 3.56L46 51H17.5c-1.72 0-2.6-2.08-1.38-3.31L36.9 27H17c-1.66 0-2.5-2-1.34-3.2l.03-.03C16.05 22.3 16.5 22 17 22Z" fill="white"></path>
+  </svg> <span>Liên hệ Admin</span></a>
+            </div>
+            <div class="footer" bis_skin_checked="1">
+              Kênh tiktok share key trải nghiệm, anh em theo dõi kênh để lấy key sớm nhé.<br>
+              Key trải nghiệm tác dụng sẽ ít hơn 1 xíu, anh em muốn mua key vĩnh viễn cứ liên hệ admin.
+            </div>
+          </div>
+
+          <div class="liveFx" id="liveFxBox" bis_skin_checked="1"><span class="fxLine">⚡ Chờ kích hoạt module...</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" bis_skin_checked="1"></div>
+
+<script>
+    const msg = document.getElementById("msg");
+    const loginView = document.getElementById("loginView");
+    const panelView = document.getElementById("panelView");
+    const loadingLayer = document.getElementById("loadingLayer");
+    const liveFxBox = document.getElementById("liveFxBox");
+    const sensiValue = document.getElementById("sensiValue");
+    const keyNotice = document.getElementById("keyNotice");
+    const toast = document.getElementById("toast");
+
+    const STATIC_KEY = "XDORZY"; 
+
+    let fxTimer = null;
+
+    function dangNhap() {
+        const inputKey = document.getElementById("keyInput").value.trim();
+
+        if (!inputKey) {
+            setMsg("Vui lòng nhập key!", "err");
+            return;
+        }
+
+        if (inputKey === STATIC_KEY) {
+            setMsg("Đang xác thực...", "ok");
+            setTimeout(() => {
+                showToast("Đăng nhập thành công!", "ok");
+                moPanel();
+            }, 800);
+        } else {
+            setMsg("Key không chính xác hoặc đã hết hạn!", "err");
+            showToast("Sai Key!", "err");
+        }
+    }
+
+    function setMsg(text, type) {
+        msg.textContent = text;
+        msg.className = "msg " + (type || "");
+    }
+
+    function moPanel() {
+        loginView.classList.add("hidden");
+        panelView.classList.remove("hidden");
+        
+        keyNotice.innerHTML = `<b>Key:</b> ${STATIC_KEY}<br><b>Hạn dùng:</b> Vĩnh viễn<br><b>Trạng thái:</b> Online`;
+        
+        taiTrangThai();
+        startFxFeed();
+        initTabs(); // Kích hoạt nút bấm chuyển trang
+    }
+
+    // 3. LOGIC CHUYỂN TAB (Sửa lỗi không bấm được các mục)
+    function initTabs() {
+        const tabs = document.querySelectorAll(".tab");
+        const panes = document.querySelectorAll(".tabPane");
+
+        tabs.forEach(btn => {
+            btn.onclick = function() {
+                const targetId = this.getAttribute("data-tab");
+                const targetPane = document.getElementById(targetId);
+
+                if (targetPane) {
+                    tabs.forEach(b => b.classList.remove("active"));
+                    panes.forEach(p => p.classList.remove("active"));
+
+                    this.classList.add("active");
+                    targetPane.classList.add("active");
+                }
+            };
+        });
+    }
+
+    // 4. CÁC HÀM TIỆN ÍCH KHÁC
+    function showToast(text, type) {
+        toast.className = "toast show " + (type || "");
+        toast.textContent = text;
+        setTimeout(() => { toast.className = "toast"; }, 2000);
+    }
+
+    function startFxFeed() {
+        clearInterval(fxTimer);
+        const lines = ["⚡ Secure Sync...", "⚡ Data Optimized...", "⚡ System Ready..."];
+        let i = 0;
+        fxTimer = setInterval(() => {
+            if(liveFxBox) liveFxBox.innerHTML = `<span class="fxLine">${lines[i % lines.length]}</span>`;
+            i++;
+        }, 1500);
+    }
+
+    function toggleFx(el, label) {
+        luuTrangThai();
+        showToast(label + (el.checked ? " đã bật" : " đã tắt"), el.checked ? "ok" : "err");
+    }
+
+    function updateSensi(val) {
+        if(sensiValue) sensiValue.textContent = val;
+        localStorage.setItem("ath_sensi", val);
+    }
+
+    function luuTrangThai() {
+        const state = {};
+        ["f1","f2","f3","f4","f5","f6","f7"].forEach(id => {
+            const el = document.getElementById(id);
+            if(el) state[id] = el.checked;
+        });
+        localStorage.setItem("ath_state", JSON.stringify(state));
+    }
+
+    function taiTrangThai() {
+        try {
+            const state = JSON.parse(localStorage.getItem("ath_state") || "{}");
+            ["f1","f2","f3","f4","f5","f6","f7"].forEach(id => {
+                const el = document.getElementById(id);
+                if(el) el.checked = !!state[id];
+            });
+            const savedSensi = localStorage.getItem("ath_sensi") || "60";
+            document.getElementById("sensiRange").value = savedSensi;
+            if(sensiValue) sensiValue.textContent = savedSensi;
+        } catch(e) {}
+    }
+
+    function dangXuat() {
+        panelView.classList.add("hidden");
+        loginView.classList.remove("hidden");
+        document.getElementById("keyInput").value = "";
+        setMsg("Đã đăng xuất", "");
+    }
+
+    window.addEventListener("load", () => {
+        setTimeout(() => { if(loadingLayer) loadingLayer.classList.add("hide"); }, 1500);
+    });
+</script>
